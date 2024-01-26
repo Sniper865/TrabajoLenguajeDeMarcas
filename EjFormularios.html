@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormularioCSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      width: 400px; /* Aumenta el ancho del formulario */
+      padding: 20px;
+      box-sizing: border-box; /* Incluye el borde y el relleno en el ancho y alto especificados */
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      width: calc(100% - 16px); /* Ajuste para compensar el borde y relleno */
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: none; /* Elimina el borde del textarea */
+      border-radius: 3px;
+      resize: vertical; /* Permite que el usuario cambie el tamaño del textarea de forma vertical */
+    }
+
+    label.radio-label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="pais">País:</label>
+    <select id="pais" name="pais">
+      <option value="espana">España</option>
+      <option value="francia">Francia</option>
+      <option value="italia">Italia</option>
+      <option value="alemania">Alemania</option>
+      <option value="reino_unido">Reino Unido</option>
+    </select>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+
+    <label>Género:</label>
+    <label class="radio-label" for="hombre">
+      Hombre <input type="radio" id="hombre" name="genero" value="hombre">
+    </label>
+    <label class="radio-label" for="mujer">
+      Mujer <input type="radio" id="mujer" name="genero" value="mujer">
+    </label>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
